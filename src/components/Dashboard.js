@@ -13,7 +13,7 @@ export class Dashboard extends Component {
         onClick={() => {this.props.history.push("/newclass")}}
         >Add Class</Button>
         <UserClassList userClasses={this.props.userClasses} />
-        <ClassList classes={this.props.classes} history={this.props.history} />
+        <ClassList classes={this.props.classes} history={this.props.history} addUserClass={this.props.addUserClass} />
       </div>
     )
   }

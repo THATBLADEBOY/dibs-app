@@ -70,19 +70,28 @@ updateClass = (classesId, editedClassObj) => {
       )
   }
 
+  addUserClass = (userClasses) => UserClassManager.post(userClasses)
+  .then(() => UserClassManager.getAll())
+  .then(userClasses => this.setState({
+    userClasses: userClasses
+  })
+  )
+
 
 updateComponent = () => {
 }
 
 
   render() {
+
+    console.log(this.state.userClasses);
     return (
       <div>
         <Route path="/login" render={(props) => {
           return <Login {...props} users={this.state.users} updateComponent={this.updateComponent} />
         }} />
         <Route exact path="/" render={(props) => {
-          return <Dashboard {...props} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} />
+          return <Dashboard {...props} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} />
         }} />
         <Route path="/newclass" render={(props) => {
           return <ClassForm {...props} addClass={this.addClass}/>

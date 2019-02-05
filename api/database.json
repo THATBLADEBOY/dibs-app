@@ -92,6 +92,36 @@
       "id": 5,
       "userId": 2,
       "classId": 1
+    },
+    {
+      "classId": 3,
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "classId": 4,
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "classId": 2,
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "classId": 1,
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "classId": 1,
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "classId": 1,
+      "userId": 1,
+      "id": 11
     }
   ]
 }
