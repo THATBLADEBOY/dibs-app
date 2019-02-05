@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard';
 import ClassManager from './module/ClassManager'
 import UserClassManager from './module/UserClassManager'
 import ClassForm from './components/ClassForm'
+import ClassEditForm from './components/ClassEditForm'
 
 export class ApplicationViews extends Component {
 
@@ -51,6 +52,16 @@ addClass = (theClass) => ClassManager.post(theClass)
 })
 )
 
+updateClass = (classesId, editedClassObj) => {
+    return ClassManager.put(classesId, editedClassObj)
+      .then(() => ClassManager.getAll())
+      .then(classes => {
+        this.setState({
+          classes: classes
+        })
+      });
+  }
+
 
 updateComponent = () => {
 }
@@ -67,6 +78,9 @@ updateComponent = () => {
         }} />
         <Route path="/newclass" render={(props) => {
           return <ClassForm {...props} addClass={this.addClass}/>
+        }} />
+        <Route path="/:classesId(\d+)/edit" render={(props) => {
+          return <ClassEditForm {...props} updateClass={this.updateClass}/>
         }} />
       </div>
     )

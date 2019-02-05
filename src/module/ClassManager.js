@@ -15,5 +15,15 @@ export default {
       },
       body: JSON.stringify(newClass)
     }).then(data => data.json());
+  },
+  put(classId, existingClass) {
+    return fetch(`${remoteURL}/classes/${classId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(existingClass)
+    }).then(data => data.json());
   }
+  
 }

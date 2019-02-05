@@ -41,7 +41,7 @@ createUserClass = (evt) => {
                 <p>{classes.date} {classes.time}</p>
                 <p>Trainer: {classes.trainerId}</p>
                 <Button onClick={this.createUserClass} color="primary">dibs</Button>
-                <Button color="link">Edit</Button>
+                <Button onClick={() => {this.props.history.push(`/${classes.id}/edit`)}} color="link">Edit</Button>
             </div> 
         )}
         </div>
