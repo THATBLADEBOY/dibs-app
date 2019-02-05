@@ -62,6 +62,14 @@ updateClass = (classesId, editedClassObj) => {
       });
   }
 
+  deleteClass = (id) => {
+    return ClassManager.removeAndList(id)
+      .then(classes => this.setState({
+        classes
+      })
+      )
+  }
+
 
 updateComponent = () => {
 }
@@ -80,7 +88,7 @@ updateComponent = () => {
           return <ClassForm {...props} addClass={this.addClass}/>
         }} />
         <Route path="/:classesId(\d+)/edit" render={(props) => {
-          return <ClassEditForm {...props} updateClass={this.updateClass}/>
+          return <ClassEditForm {...props} updateClass={this.updateClass} deleteClass={this.deleteClass}/>
         }} />
       </div>
     )

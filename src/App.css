@@ -34,3 +34,11 @@ h2 {
     width: 100%;
     border-radius: 0px;
 }
+
+.delete-class-button {
+  position: fixed;
+  bottom:0;
+  right: 0;
+  width: 100%;
+  border-radius: 0px;
+}

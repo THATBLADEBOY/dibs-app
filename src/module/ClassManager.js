@@ -24,6 +24,14 @@ export default {
       },
       body: JSON.stringify(existingClass)
     }).then(data => data.json());
-  }
+  },
+  removeAndList(id){
+    return fetch(`http://localhost:5002/classes/${id}`, {
+        method: "DELETE"
+    })
+    .then(e => e.json())
+    .then(() => fetch(`http://localhost:5002/classes`))
+    .then(e => e.json())
+}
   
 }

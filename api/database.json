@@ -35,12 +35,12 @@
       "trainerId": 1
     },
     {
-      "id": 3,
-      "className": "Kickboxing",
+      "className": "Kickboxing22",
       "date": "01/02/2020",
       "time": "6:00pm",
       "description": "It's like boxing with your feet.",
-      "trainerId": 1
+      "trainerId": 1,
+      "id": 3
     },
     {
       "className": "Test",
@@ -59,12 +59,12 @@
       "id": 5
     },
     {
-      "className": "Test2",
-      "date": "2019-02-15",
-      "time": "5:00pm",
+      "className": "EXAMPLE",
+      "date": "2019-02-14",
+      "time": "6:00pm",
       "description": "TESTING",
       "trainerId": "1",
-      "id": 6
+      "id": 7
     }
   ],
   "userClasses": [

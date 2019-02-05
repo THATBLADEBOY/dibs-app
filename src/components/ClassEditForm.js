@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ClassManager from '../module/ClassManager'
+import { Button } from 'reactstrap'
 
 export default class EventEditForm extends Component{
     state = {
@@ -91,6 +92,12 @@ export default class EventEditForm extends Component{
                           />
                 </div>
                 <button type="submit" onClick={this.updateExistingClass} className="btn btn-primary">Update</button> <button onClick={() => {this.props.history.push("/")}} className="btn btn-primary">Cancel</button>
+                <Button color="danger" className="delete-class-button" onClick={() => {
+                    let deleteConfirmation = window.confirm(`Are you sure you want to delete ${this.state.className} on ${this.state.date}?`)
+                    if(deleteConfirmation === true) {
+                    this.props.deleteClass(this.props.match.params.classesId)
+                    this.props.history.push("/")
+                    }}}>Delete Class</Button>
                 
                 
             </form>
