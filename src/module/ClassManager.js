@@ -6,5 +6,14 @@ export default {
   },
   getAll() {
     return fetch(`${remoteURL}/classes`).then(e => e.json());
+  },
+  post(newClass) {
+    return fetch(`${remoteURL}/classes`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newClass)
+    }).then(data => data.json());
   }
 }

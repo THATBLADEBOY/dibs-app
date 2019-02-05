@@ -28,7 +28,7 @@ export class Login extends Component {
             user.email === currentUser)
 
 
-            console.log(authenticated.id)
+            // console.log(authenticated.id)
 
             sessionStorage.setItem(
                 "userId",

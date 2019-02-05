@@ -1,62 +1,97 @@
 {
-
-    "users": [ 
-        {
-            "id": 1,
-            "firstName": "Austin",
-            "lastName": "Blade",
-            "email": "aus10b@gmail.com",
-            "password": "pw",
-            "trainerStatus": true
-        }
-    ],
-    "classes": [
-        {
-            "id": 1,
-            "className": "Spin Class",
-            "date": "01/01/2020",
-            "time": "5:00pm",
-            "description": "This is a class where your ride a bike but don't actually go anywhere.",
-            "trainerId": 1
-        },
-        {
-            "id": 2,
-            "className": "Kickboxing",
-            "date": "01/02/2020",
-            "time": "6:00pm",
-            "description": "It's like boxing with your feet.",
-            "trainerId": 1
-        },
-        {
-            "id": 3,
-            "className": "Kickboxing",
-            "date": "01/02/2020",
-            "time": "6:00pm",
-            "description": "It's like boxing with your feet.",
-            "trainerId": 1
-        }
-    ],
-    "userClasses": [
-        {
-            "id": 1,
-            "userId": 1,
-            "classId": 1
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "classId": 2
-        },
-        {
-            "id": 3,
-            "userId": 3,
-            "classId": 2
-        },
-        {
-            "id": 4,
-            "userId": 1,
-            "classId": 2
-        }
-    ]
-    
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Austin",
+      "lastName": "Blade",
+      "email": "aus10b@gmail.com",
+      "password": "pw",
+      "trainerStatus": true
+    },
+    {
+      "id": 2,
+      "firstName": "Frank",
+      "lastName": "Sinatra",
+      "email": "sinatra@gmail.com",
+      "password": "pw",
+      "trainerStatus": true
+    }
+  ],
+  "classes": [
+    {
+      "id": 1,
+      "className": "Spin Class",
+      "date": "01/01/2020",
+      "time": "5:00pm",
+      "description": "This is a class where your ride a bike but don't actually go anywhere.",
+      "trainerId": 1
+    },
+    {
+      "id": 2,
+      "className": "Kickboxing",
+      "date": "01/02/2020",
+      "time": "6:00pm",
+      "description": "It's like boxing with your feet.",
+      "trainerId": 1
+    },
+    {
+      "id": 3,
+      "className": "Kickboxing",
+      "date": "01/02/2020",
+      "time": "6:00pm",
+      "description": "It's like boxing with your feet.",
+      "trainerId": 1
+    },
+    {
+      "className": "Test",
+      "date": "2019-02-20",
+      "time": "6:00pm",
+      "description": "TESTING",
+      "trainerId": "1",
+      "id": 4
+    },
+    {
+      "className": "Test",
+      "date": "2019-02-21",
+      "time": "6:00pm",
+      "description": "TESTING",
+      "trainerId": "1",
+      "id": 5
+    },
+    {
+      "className": "Test2",
+      "date": "2019-02-15",
+      "time": "5:00pm",
+      "description": "TESTING",
+      "trainerId": "1",
+      "id": 6
+    }
+  ],
+  "userClasses": [
+    {
+      "id": 1,
+      "userId": 1,
+      "classId": 1
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "classId": 2
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "classId": 2
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "classId": 2
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "classId": 1
+    }
+  ]
 }

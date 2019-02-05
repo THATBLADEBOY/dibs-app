@@ -10,5 +10,15 @@ export default {
   getUserSpecificClasses(sessionId) {
     return fetch(`${remoteURL}/userClasses?userId=${sessionId}&_expand=class`)
     .then(e => e.json());
+    },
+
+post(newClass) {
+    return fetch(`${remoteURL}/userClasses`, {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newClass)
+    }).then(data => data.json());
     }
 }

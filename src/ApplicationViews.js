@@ -5,6 +5,7 @@ import UsersManager from "./module/UsersManager"
 import Dashboard from './components/Dashboard';
 import ClassManager from './module/ClassManager'
 import UserClassManager from './module/UserClassManager'
+import ClassForm from './components/ClassForm'
 
 export class ApplicationViews extends Component {
 
@@ -24,6 +25,8 @@ ClassManager.getAll().then(allClasses => {
     this.setState({ classes: allClasses });
 })
 
+
+
 // UserClassManager.getAll().then(allUserClasses => {
 //     this.setState({ userClasses: allUserClasses })
 // })
@@ -41,6 +44,13 @@ UserClassManager.getUserSpecificClasses(currentUserId).then(allClasses => {
     
 }
 
+addClass = (theClass) => ClassManager.post(theClass)
+.then(() => ClassManager.getAll())
+.then(theClass => this.setState({
+  classes: theClass
+})
+)
+
 
 updateComponent = () => {
 }
@@ -54,6 +64,9 @@ updateComponent = () => {
         }} />
         <Route exact path="/" render={(props) => {
           return <Dashboard {...props} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} />
+        }} />
+        <Route path="/newclass" render={(props) => {
+          return <ClassForm {...props} addClass={this.addClass}/>
         }} />
       </div>
     )

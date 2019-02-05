@@ -36,7 +36,7 @@ clearSession = () => {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink onClick={this.clearSession} href="/login">Logout</NavLink>
+              <NavLink onClick={this.clearSession} href="/login">Logout</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
