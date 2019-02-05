@@ -19,12 +19,12 @@
   ],
   "classes": [
     {
-      "id": 1,
       "className": "Spin Class",
       "date": "01/01/2020",
       "time": "5:00pm",
       "description": "This is a class where your ride a bike but don't actually go anywhere.",
-      "trainerId": 1
+      "trainerId": 1,
+      "id": 1
     },
     {
       "id": 2,
@@ -51,7 +51,7 @@
       "id": 4
     },
     {
-      "className": "TestEDIT",
+      "className": "DAS IT!",
       "date": "2019-02-21",
       "time": "6:00pm",
       "description": "TESTING",

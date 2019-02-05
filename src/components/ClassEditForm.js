@@ -18,7 +18,7 @@ export default class EventEditForm extends Component{
   componentDidMount(){
     ClassManager.get(this.props.match.params.classesId).then(classes => {
       this.setState({
-        name:classes.name,
+        className:classes.className,
         date:classes.date,
         time:classes.time,
         description:classes.description,
@@ -90,7 +90,9 @@ export default class EventEditForm extends Component{
                           value={this.state.trainerId}
                           />
                 </div>
-                <button type="submit" onClick={this.updateExistingClass} className="btn btn-primary">Update</button>
+                <button type="submit" onClick={this.updateExistingClass} className="btn btn-primary">Update</button> <button onClick={() => {this.props.history.push("/")}} className="btn btn-primary">Cancel</button>
+                
+                
             </form>
         </React.Fragment>
     )
