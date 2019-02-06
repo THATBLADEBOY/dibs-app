@@ -33,6 +33,9 @@ export class Login extends Component {
             sessionStorage.setItem(
                 "userId",
                 authenticated.id)
+            sessionStorage.setItem(
+                "trainerStatus",
+            authenticated.trainerStatus)
 
             if (authenticated === undefined){
                 alert("Whoops! We we couldn't find your account. Please re-renter a valid username and email or sign up below!")

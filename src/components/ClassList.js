@@ -7,6 +7,7 @@ export class ClassList extends Component {
 
 
   render() {
+      let isTrainer = sessionStorage.getItem("trainerStatus");
     return (
       <div>
         <h2>Available Classes</h2>
@@ -26,7 +27,9 @@ export class ClassList extends Component {
                     }
                     this.props.addUserClass(newUserClass);
                 }} color="primary">dibs</Button>
+                {isTrainer === "true" &&
                 <Button onClick={() => {this.props.history.push(`/${classes.id}/edit`)}} color="link">Edit</Button>
+                }
             </div> 
         )}
         </div>

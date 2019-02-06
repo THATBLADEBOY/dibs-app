@@ -15,6 +15,14 @@
       "email": "sinatra@gmail.com",
       "password": "pw",
       "trainerStatus": true
+    },
+    {
+      "id": 3,
+      "firstName": "Duke",
+      "lastName": "Ellington",
+      "email": "duke@gmail.com",
+      "password": "pw",
+      "trainerStatus": false
     }
   ],
   "classes": [
@@ -116,6 +124,16 @@
       "classId": 2,
       "userId": 2,
       "id": 19
+    },
+    {
+      "classId": 2,
+      "userId": 3,
+      "id": 21
+    },
+    {
+      "classId": 1,
+      "userId": 3,
+      "id": 22
     }
   ]
 }
