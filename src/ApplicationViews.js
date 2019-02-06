@@ -13,10 +13,13 @@ export class ApplicationViews extends Component {
     state = {
         users: [],
         classes: [],
-        userClasses: []
+        userClasses: [],
+        currentUserId: ""
       }
 
 componentDidMount() {
+
+    
 
 UsersManager.getAll().then(allUsers => {
     this.setState({ users: allUsers });
@@ -32,17 +35,21 @@ ClassManager.getAll().then(allClasses => {
 //     this.setState({ userClasses: allUserClasses })
 // })
 
-const currentUser = sessionStorage.getItem("userId");
-const currentUserId = Number(currentUser);
 
-UserClassManager.getUserSpecificClasses(currentUserId).then(allClasses => {
-    this.setState({ userClasses: allClasses })
-})
-
-
+this.getUserClasses();
 
 
     
+}
+
+getUserClasses = () => {
+    const currentUser = sessionStorage.getItem("userId");
+    const currentUserId = Number(currentUser);
+    this.setState({currentUserId: currentUserId})
+    console.log("userID", currentUserId);
+    UserClassManager.getUserSpecificClasses(currentUserId).then(allClasses => {
+    this.setState({ userClasses: allClasses })
+})
 }
 
 addClass = (theClass) => ClassManager.post(theClass)
@@ -71,7 +78,7 @@ updateClass = (classesId, editedClassObj) => {
   }
 
   addUserClass = (userClasses) => UserClassManager.post(userClasses)
-  .then(() => UserClassManager.getUserSpecificClasses(this.currentUserId))
+  .then(() => UserClassManager.getUserSpecificClasses(this.state.currentUserId))
   .then(userClasses => this.setState({
     userClasses: userClasses
   })
@@ -92,11 +99,13 @@ updateComponent = () => {
 
   render() {
 
+
+
     console.log(this.state.userClasses);
     return (
       <div>
         <Route path="/login" render={(props) => {
-          return <Login {...props} users={this.state.users} updateComponent={this.updateComponent} />
+          return <Login {...props} getUserClasses={this.getUserClasses} users={this.state.users} updateComponent={this.updateComponent} />
         }} />
         <Route exact path="/" render={(props) => {
           return <Dashboard {...props} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>

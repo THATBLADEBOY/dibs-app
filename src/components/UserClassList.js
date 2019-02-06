@@ -1,12 +1,38 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
+import UserClassManager from '../module/UserClassManager'
 export class UserClassList extends Component {
+
+    
+
+    // state = {
+    //     userClasses: []
+    // }
+
+    // deleteUserClass = (id) => {
+    //     UserClassManager.removeAndList(id)
+    //       .then(classes => this.setState({
+    //         userClasses: classes
+    //       }, () => null)
+    //       )
+    //   } 
+
+    // componentDidMount() {
+    //     let sessionId = sessionStorage.getItem("userId")
+    //     console.log("teeest:", this.props.userClasses)
+    //     UserClassManager.getUserSpecificClasses(sessionId)
+    //     .then(allClasses => {
+    //         this.setState({ userClasses: allClasses })
+    //     })
+        
+        
+    // }
         
   render() {
-    console.log(this.props.userClasses.map(eachClass => eachClass.class.className))
-    if (this.props.userClasses.length === 0) {
-        return null
-      }
+
+    // if (this.props.userClasses.length === 0) {
+    //     return null
+    //   }
 
       console.log("userClasses:", this.props.userClasses)
       
