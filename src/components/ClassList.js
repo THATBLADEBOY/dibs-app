@@ -31,8 +31,8 @@ export class ClassList extends Component {
                         userId: currentUserId
                     }
                     this.props.addUserClass(newUserClass);
-                }} color="primary">dibs</Button>{'  '}
-                <ModalExample className="modal" classInfo={classes.description} classTitle={classes.className}/>
+                }} color="primary">dibs</Button>
+                <ModalExample classInfo={classes.description} classTitle={classes.className}/>
                 </div>
                 
                 
