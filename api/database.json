@@ -69,34 +69,9 @@
   ],
   "userClasses": [
     {
-      "id": 1,
-      "userId": 1,
-      "classId": 1
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "classId": 2
-    },
-    {
-      "id": 3,
-      "userId": 2,
-      "classId": 2
-    },
-    {
       "id": 4,
       "userId": 1,
       "classId": 2
-    },
-    {
-      "id": 5,
-      "userId": 2,
-      "classId": 1
-    },
-    {
-      "classId": 3,
-      "userId": 2,
-      "id": 6
     },
     {
       "classId": 4,
@@ -122,6 +97,26 @@
       "classId": 1,
       "userId": 1,
       "id": 11
+    },
+    {
+      "classId": 1,
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "classId": 4,
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "classId": 2,
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "classId": 7,
+      "userId": 1,
+      "id": 15
     }
   ]
 }

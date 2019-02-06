@@ -71,11 +71,19 @@ updateClass = (classesId, editedClassObj) => {
   }
 
   addUserClass = (userClasses) => UserClassManager.post(userClasses)
-  .then(() => UserClassManager.getAll())
+  .then(() => UserClassManager.getUserSpecificClasses(this.currentUserId))
   .then(userClasses => this.setState({
     userClasses: userClasses
   })
   )
+
+  deleteUserClass = (id) => {
+    UserClassManager.removeAndList(id)
+      .then(classes => this.setState({
+        userClasses: classes
+      }, () => null)
+      )
+  } 
 
 
 updateComponent = () => {
@@ -91,7 +99,7 @@ updateComponent = () => {
           return <Login {...props} users={this.state.users} updateComponent={this.updateComponent} />
         }} />
         <Route exact path="/" render={(props) => {
-          return <Dashboard {...props} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} />
+          return <Dashboard {...props} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
         }} />
         <Route path="/newclass" render={(props) => {
           return <ClassForm {...props} addClass={this.addClass}/>

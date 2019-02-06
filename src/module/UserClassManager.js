@@ -13,12 +13,22 @@ export default {
     },
 
 post(newClass) {
-    return fetch(`${remoteURL}/userClasses`, {
+    let sessionId = sessionStorage.getItem("userId")
+    return fetch(`${remoteURL}/userClasses?userId=${sessionId}&_expand=class`, {
         method: "POST",
         headers: {
         "Content-Type": "application/json"
         },
         body: JSON.stringify(newClass)
     }).then(data => data.json());
-    }
+    },
+removeAndList(id){
+    let sessionId = sessionStorage.getItem("userId")
+
+    return fetch(`http://localhost:5002/userClasses/${id}`, {
+        method: "DELETE"
+    })
+    .then(e => e.json())
+    .then(() => this.getUserSpecificClasses(sessionId))
+}
 }
