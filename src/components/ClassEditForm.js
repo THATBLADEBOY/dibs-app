@@ -96,6 +96,7 @@ export default class EventEditForm extends Component{
                     let deleteConfirmation = window.confirm(`Are you sure you want to delete ${this.state.className} on ${this.state.date}?`)
                     if(deleteConfirmation === true) {
                     this.props.deleteClass(this.props.match.params.classesId)
+                    this.props.getUserClasses();
                     this.props.history.push("/")
                     }}}>Delete Class</Button>
                 

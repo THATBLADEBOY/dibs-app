@@ -19,8 +19,6 @@ export class ApplicationViews extends Component {
 
 componentDidMount() {
 
-    
-
 UsersManager.getAll().then(allUsers => {
     this.setState({ users: allUsers });
     })
@@ -29,17 +27,7 @@ ClassManager.getAll().then(allClasses => {
     this.setState({ classes: allClasses });
 })
 
-
-
-// UserClassManager.getAll().then(allUserClasses => {
-//     this.setState({ userClasses: allUserClasses })
-// })
-
-
 this.getUserClasses();
-
-
-    
 }
 
 getUserClasses = () => {
@@ -69,39 +57,33 @@ updateClass = (classesId, editedClassObj) => {
       });
   }
 
-  deleteClass = (id) => {
-    return ClassManager.removeAndList(id)
-      .then(classes => this.setState({
-        classes
-      })
-      )
-  }
+deleteClass = (id) => {
+return ClassManager.removeAndList(id)
+    .then(classes => this.setState({
+    classes
+    })
+    )
+}
 
-  addUserClass = (userClasses) => UserClassManager.post(userClasses)
-  .then(() => UserClassManager.getUserSpecificClasses(this.state.currentUserId))
-  .then(userClasses => this.setState({
-    userClasses: userClasses
-  })
-  )
+addUserClass = (userClasses) => UserClassManager.post(userClasses)
+.then(() => UserClassManager.getUserSpecificClasses(this.state.currentUserId))
+.then(userClasses => this.setState({
+userClasses: userClasses
+})
+)
 
-  deleteUserClass = (id) => {
-    UserClassManager.removeAndList(id)
-      .then(classes => this.setState({
-        userClasses: classes
-      }, () => null)
-      )
-  } 
-
+deleteUserClass = (id) => {
+UserClassManager.removeAndList(id)
+    .then(classes => this.setState({
+    userClasses: classes
+    }, () => null)
+    )
+} 
 
 updateComponent = () => {
 }
 
-
   render() {
-
-
-
-    console.log(this.state.userClasses);
     return (
       <div>
         <Route path="/login" render={(props) => {
@@ -114,7 +96,7 @@ updateComponent = () => {
           return <ClassForm {...props} addClass={this.addClass}/>
         }} />
         <Route path="/:classesId(\d+)/edit" render={(props) => {
-          return <ClassEditForm {...props} updateClass={this.updateClass} deleteClass={this.deleteClass}/>
+          return <ClassEditForm {...props} updateClass={this.updateClass} deleteClass={this.deleteClass} getUserClasses={this.getUserClasses}/>
         }} />
       </div>
     )

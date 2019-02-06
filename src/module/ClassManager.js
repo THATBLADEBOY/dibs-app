@@ -33,5 +33,4 @@ export default {
     .then(() => fetch(`http://localhost:5002/classes`))
     .then(e => e.json())
 }
-  
 }

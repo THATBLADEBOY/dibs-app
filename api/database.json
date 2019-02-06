@@ -49,14 +49,6 @@
       "description": "TESTING",
       "trainerId": "1",
       "id": 4
-    },
-    {
-      "className": "EXAMPLE",
-      "date": "2019-02-14",
-      "time": "6:00pm",
-      "description": "TESTING",
-      "trainerId": "1",
-      "id": 7
     }
   ],
   "userClasses": [
@@ -104,11 +96,6 @@
       "classId": 2,
       "userId": 1,
       "id": 14
-    },
-    {
-      "classId": 7,
-      "userId": 1,
-      "id": 15
     },
     {
       "classId": 2,
