@@ -24,13 +24,12 @@ class ModalExample extends React.Component {
       <div>
         <Button color="info" onClick={this.toggle}>info</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle} close={closeBtn}>Modal title</ModalHeader>
+          <ModalHeader toggle={this.toggle} close={closeBtn}>{this.props.classTitle}</ModalHeader>
           <ModalBody>
-            This is class information.
+            {this.props.classInfo}
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>dibs</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>cancel</Button>
+            <Button color="primary" onClick={this.toggle}>Sweet, Thanks!</Button>
           </ModalFooter>
         </Modal>
       </div>

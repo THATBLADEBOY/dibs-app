@@ -14,10 +14,15 @@ export class ClassList extends Component {
         <div className="class-list  available-classes">
         {this.props.classes.map(classes => 
             <div className="class-container" ref={this.classRef} key={classes.id} id={classes.id}>
+                <div className="head-class-container">
                 <h3>{classes.className}</h3>
-                <p>{classes.description}</p>
+                {isTrainer === "true" &&
+                <Button className="edit-button" onClick={() => {this.props.history.push(`/${classes.id}/edit`)}} color="link">Edit</Button>
+                }
+                </div>
                 <p>{classes.date} {classes.time}</p>
-                <p>Trainer: {classes.trainerId}</p>
+                <p>with {classes.trainerId}</p>
+                <div className="buttons-container">
                 <Button onClick={() => {
                     const currentUser = sessionStorage.getItem("userId");
                     const currentUserId = Number(currentUser);
@@ -26,10 +31,11 @@ export class ClassList extends Component {
                         userId: currentUserId
                     }
                     this.props.addUserClass(newUserClass);
-                }} color="primary">dibs</Button>
-                {isTrainer === "true" &&
-                <Button onClick={() => {this.props.history.push(`/${classes.id}/edit`)}} color="link">Edit</Button>
-                }
+                }} color="primary">dibs</Button>{'  '}
+                <ModalExample className="modal" classInfo={classes.description} classTitle={classes.className}/>
+                </div>
+                
+                
             </div> 
         )}
         </div>

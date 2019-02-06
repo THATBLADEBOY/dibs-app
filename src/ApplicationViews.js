@@ -65,12 +65,14 @@ return ClassManager.removeAndList(id)
     )
 }
 
-addUserClass = (userClasses) => UserClassManager.post(userClasses)
+addUserClass = (userClasses) => {
+UserClassManager.post(userClasses)
 .then(() => UserClassManager.getUserSpecificClasses(this.state.currentUserId))
 .then(userClasses => this.setState({
 userClasses: userClasses
 })
 )
+}
 
 deleteUserClass = (id) => {
 UserClassManager.removeAndList(id)

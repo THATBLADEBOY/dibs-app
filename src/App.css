@@ -1,15 +1,15 @@
 .App {
   text-align: center;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Merriweather', serif;
 }
 
 .dibs {
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
 }
 
 h2 {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .class-container {
@@ -17,6 +17,10 @@ h2 {
   max-width: 45%;
   min-width: 45%;
   margin: 2%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 5px 5px 12px #d8d8d8;
   /* justify-content: center;
   flex-wrap: wrap; */
 }
@@ -25,6 +29,19 @@ h2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.class-container>h3 {
+  align-self: flex-start;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.drop-class-button {
+  max-width: 25%;
+  align-self: flex-end;
+  margin-right: 2%;
+  margin-bottom: 2%;
 }
 
 .add-class-button {
@@ -45,4 +62,30 @@ h2 {
 
 .available-classes {
   margin-bottom: 3%;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.modal {
+  margin-bottom: 2%;
+  margin-right: 2%;
+}
+
+.head-class-container {
+  display: flex;
+  justify-content: space-between
+}
+
+.head-class-container>h3 {
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.edit-button {
+  align-self: flex-end;
 }
