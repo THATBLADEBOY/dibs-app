@@ -8,6 +8,7 @@ import UserClassManager from './module/UserClassManager'
 import ClassForm from './components/ClassForm'
 import ClassEditForm from './components/ClassEditForm'
 import RegistrationForm from './components/RegistrationForm'
+import TrainerRegistration from './components/TrainerRegistration'
 
 export class ApplicationViews extends Component {
 
@@ -101,6 +102,9 @@ updateComponent = () => {
         }} />
          <Route path="/user/register" render={(props) => {
           return <RegistrationForm {...props} addUser={this.addUser} />
+        }} />
+         <Route path="/trainer/register" render={(props) => {
+          return <TrainerRegistration {...props} addUser={this.addUser} />
         }} />
         <Route exact path="/" render={(props) => {
           return <Dashboard {...props} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>

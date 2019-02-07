@@ -4,7 +4,7 @@ import ApplicationViews from './ApplicationViews'
 import NavBar from './components/NavBar'
 
 class App extends Component {
-  isAuthenticated = () => sessionStorage.getItem("email") !== null
+  isAuthenticated = () => sessionStorage.getItem("userId") !== null
 
   showNav = () => {
     if (this.isAuthenticated()) {

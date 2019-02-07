@@ -4,7 +4,8 @@ import { Button } from 'reactstrap';
 export class Login extends Component {
     state = {
         password: "",
-        email: ""
+        email: "",
+        inputValue: ""
     }
 
     // Update state whenever an input field is edited
@@ -31,18 +32,19 @@ export class Login extends Component {
 
             // console.log(authenticated.id)
 
-            sessionStorage.setItem(
-                "userId",
-                authenticated.id)
-            sessionStorage.setItem(
-                "trainerStatus",
-            authenticated.trainerStatus)
+           console.log(this.state.inputValue) 
 
             if (authenticated === undefined){
                 alert("Whoops! We we couldn't find your account. Please re-renter a valid username and email or sign up below!")
-                window.location.reload()
                 // this.props.history.push("/register")
             } else {
+
+                sessionStorage.setItem(
+                    "userId",
+                    authenticated.id)
+                sessionStorage.setItem(
+                    "trainerStatus",
+                authenticated.trainerStatus)
                 // Taking user to news page
                 this.props.getUserClasses();
                 this.props.history.push("/")
@@ -57,7 +59,9 @@ export class Login extends Component {
             <h1 className="dibs">dibs</h1>
             <label htmlFor="inputUsername">
             </label>
-            <input  onChange={this.handleFieldChange} type="email"
+            <input
+            
+            onChange={this.handleFieldChange} type="email"
                 id="email"
                 placeholder="Email"
                 required autoFocus="" />

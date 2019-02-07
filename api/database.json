@@ -31,6 +31,14 @@
       "password": "pw",
       "trainerStatus": false,
       "id": 4
+    },
+    {
+      "firstName": "Sammy",
+      "lastName": "Davis",
+      "email": "sam@mail.com",
+      "password": "pw",
+      "trainerStatus": true,
+      "id": 5
     }
   ],
   "classes": [
