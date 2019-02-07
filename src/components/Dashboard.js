@@ -14,7 +14,7 @@ export class Dashboard extends Component {
         onClick={() => {this.props.history.push("/newclass")}}
         >Add Class</Button>}
         <UserClassList userClasses={this.props.userClasses} deleteUserClass={this.props.deleteUserClass} />
-        <ClassList classes={this.props.classes} history={this.props.history} addUserClass={this.props.addUserClass} />
+        <ClassList dibsFunction={this.props.dibsFunction} userClasses={this.props.userClasses} classes={this.props.classes} history={this.props.history} addUserClass={this.props.addUserClass} />
       </div>
     )
   }

@@ -42,6 +42,34 @@ getUserClasses = () => {
 })
 }
 
+
+dibsFunction = (classId) => {
+
+  let classesAlreadySignedUpFor = this.state.userClasses.map(eachClass => {
+    return eachClass.class.id
+  })
+
+  console.log(this.state.userClasses)
+
+  console.log(classesAlreadySignedUpFor);
+ let alreadySignedUp = classesAlreadySignedUpFor.includes(classId);
+
+ if(alreadySignedUp === true) {
+   alert("You're already signed up!")
+ } else {
+  const currentUser = sessionStorage.getItem("userId");
+  const currentUserId = Number(currentUser);
+  const newUserClass = {
+      classId: classId,
+      userId: currentUserId
+  }
+  this.addUserClass(newUserClass)
+ }
+  
+}
+
+
+
 addClass = (theClass) => ClassManager.post(theClass)
 .then(() => ClassManager.getAll())
 .then(theClass => this.setState({
@@ -107,7 +135,7 @@ updateComponent = () => {
           return <TrainerRegistration {...props} addUser={this.addUser} />
         }} />
         <Route exact path="/" render={(props) => {
-          return <Dashboard {...props} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
+          return <Dashboard {...props} dibsFunction={this.dibsFunction} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
         }} />
         <Route path="/newclass" render={(props) => {
           return <ClassForm {...props} addClass={this.addClass}/>

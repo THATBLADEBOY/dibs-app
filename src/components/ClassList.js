@@ -5,8 +5,40 @@ import ModalExample from './Modal'
 
 export class ClassList extends Component {
 
+    componentDidMount() {
+
+
+
+
+    }
+
+    dibsFunction = (classId) => {
+        this.props.userClasses.class.map(eachClass => {
+            if(eachClass.id === classId) {
+                console.log("You Got It Dude")
+            } else {
+                const currentUser = sessionStorage.getItem("userId");
+                    const currentUserId = Number(currentUser);
+                    const newUserClass = {
+                        classId: classId,
+                        userId: currentUserId
+                    }
+                    this.props.addUserClass(newUserClass)
+            }
+        })
+    }
+
+    
+
 
   render() {
+
+    
+
+
+
+
+    console.log("this one", this.props.userClasses)
       let isTrainer = sessionStorage.getItem("trainerStatus");
     return (
       <div>
@@ -23,7 +55,7 @@ export class ClassList extends Component {
                 <p>{classes.date} {classes.time}</p>
                 <p>with {classes.trainerId}</p>
                 <div className="buttons-container">
-                <Button className="dibs-button" onClick={() => {
+                {/* <Button className="dibs-button" onClick={() => {
                     const currentUser = sessionStorage.getItem("userId");
                     const currentUserId = Number(currentUser);
                     const newUserClass = {
@@ -31,6 +63,9 @@ export class ClassList extends Component {
                         userId: currentUserId
                     }
                     this.props.addUserClass(newUserClass);
+                }} color="primary">dibs</Button> */}
+                <Button className="dibs-button" onClick={() => {
+                    this.props.dibsFunction(classes.id)
                 }} color="primary">dibs</Button>
                 <ModalExample classInfo={classes.description} classTitle={classes.className}/>
                 </div>
