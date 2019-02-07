@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 
+
+
+
+
 export default class ClassForm extends Component {
   // Set initial state
   state = {
@@ -48,7 +52,7 @@ export default class ClassForm extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <React.Fragment className="add-form-page">
         <form className="classForm">
           <div className="form-group">
             <label htmlFor="className">Class Name</label>
@@ -85,7 +89,7 @@ export default class ClassForm extends Component {
           </div>
           <div className="form-group">
             <label htmlFor="description">Description</label>
-            <input
+            <textarea
               type="text"
               required
               className="form-control"
@@ -105,6 +109,7 @@ export default class ClassForm extends Component {
               placeholder="Trainer"
             />
           </div>
+          <div className="add-class-form-buttons">
           <button
             type="submit"
             onClick={this.constructNewClass}
@@ -112,6 +117,15 @@ export default class ClassForm extends Component {
           >
             Submit
           </button>
+          {' '}
+          <button
+            type="submit"
+            onClick={(() => this.props.history.push("/"))}
+            className="btn btn-primary"
+          >
+            Nevermind
+          </button>
+          </div>
         </form>
       </React.Fragment>
     );

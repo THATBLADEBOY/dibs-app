@@ -89,3 +89,23 @@ h2 {
 .edit-button {
   align-self: flex-end;
 }
+
+div>.dibs-button {
+  /* font-weight: 900; */
+}
+
+.classForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-class-form-buttons {
+  display: flex;
+}
+
+.login {
+  margin: auto;
+  margin-top: 15%;
+}
+

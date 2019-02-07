@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'reactstrap';
 
 export class Login extends Component {
     state = {
@@ -53,10 +54,10 @@ export class Login extends Component {
     return (
         <section className="login">
         <form className="registerContainer" onSubmit={this.handleLogin}>
-            <h2>Please sign in</h2>
+            <h1 className="dibs">dibs</h1>
             <label htmlFor="inputUsername">
-            </label> <br></br>
-            <input onChange={this.handleFieldChange} type="email"
+            </label>
+            <input  onChange={this.handleFieldChange} type="email"
                 id="email"
                 placeholder="Email"
                 required autoFocus="" />
@@ -64,7 +65,7 @@ export class Login extends Component {
             <label htmlFor="inputEmail">
             </label>
             <br></br>
-            <input onChange={this.handleFieldChange} type="password"
+            <input  onChange={this.handleFieldChange} type="password"
                 id="password"
                 placeholder="Password"
                 required />
@@ -73,9 +74,9 @@ export class Login extends Component {
             {/* <button type="submit" className="btn btn-primary signIn">
                 Sign in
             </button> */}
-            <button type="submit" className="btn btn-primary signIn" >Sign in</button>
-
-            <p className="signUp">Don't have an account?</p>
+            <br></br>
+            <Button color="" type="submit" className="btn btn-primary signIn" >Sign in</Button>{' '}
+            <Button onClick={() => this.props.history.push("/user/register")} className="registration-button">Register</Button>
         </form>
     </section>
     )

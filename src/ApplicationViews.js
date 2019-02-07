@@ -7,6 +7,7 @@ import ClassManager from './module/ClassManager'
 import UserClassManager from './module/UserClassManager'
 import ClassForm from './components/ClassForm'
 import ClassEditForm from './components/ClassEditForm'
+import RegistrationForm from './components/RegistrationForm'
 
 export class ApplicationViews extends Component {
 
@@ -44,6 +45,13 @@ addClass = (theClass) => ClassManager.post(theClass)
 .then(() => ClassManager.getAll())
 .then(theClass => this.setState({
   classes: theClass
+})
+)
+
+addUser = (user) => UsersManager.post(user)
+.then(() => UsersManager.getAll())
+.then(users => this.setState({
+  users
 })
 )
 
@@ -90,6 +98,9 @@ updateComponent = () => {
       <div>
         <Route path="/login" render={(props) => {
           return <Login {...props} getUserClasses={this.getUserClasses} users={this.state.users} updateComponent={this.updateComponent} />
+        }} />
+         <Route path="/user/register" render={(props) => {
+          return <RegistrationForm {...props} addUser={this.addUser} />
         }} />
         <Route exact path="/" render={(props) => {
           return <Dashboard {...props} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>

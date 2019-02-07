@@ -23,7 +23,7 @@ export class ClassList extends Component {
                 <p>{classes.date} {classes.time}</p>
                 <p>with {classes.trainerId}</p>
                 <div className="buttons-container">
-                <Button onClick={() => {
+                <Button className="dibs-button" onClick={() => {
                     const currentUser = sessionStorage.getItem("userId");
                     const currentUserId = Number(currentUser);
                     const newUserClass = {

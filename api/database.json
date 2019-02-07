@@ -23,6 +23,14 @@
       "email": "duke@gmail.com",
       "password": "pw",
       "trainerStatus": false
+    },
+    {
+      "firstName": "Dean",
+      "lastName": "Martin",
+      "email": "dean@dino.com",
+      "password": "pw",
+      "trainerStatus": false,
+      "id": 4
     }
   ],
   "classes": [
@@ -31,7 +39,7 @@
       "date": "01/01/2020",
       "time": "5:00pm",
       "description": "This is a class where your ride a bike but don't actually go anywhere.",
-      "trainerId": 1,
+      "userId": 1,
       "id": 1
     },
     {
@@ -57,6 +65,14 @@
       "description": "TESTING",
       "trainerId": "1",
       "id": 4
+    },
+    {
+      "className": "Hot Yoga",
+      "date": "2019-02-28",
+      "time": "6:00pm",
+      "description": "Yoga that makes you more sweaty than regular yoga.",
+      "trainerId": "Frank Sinatra",
+      "id": 5
     }
   ],
   "userClasses": [
@@ -64,11 +80,6 @@
       "id": 4,
       "userId": 1,
       "classId": 2
-    },
-    {
-      "classId": 4,
-      "userId": 2,
-      "id": 7
     },
     {
       "classId": 2,
@@ -79,11 +90,6 @@
       "classId": 1,
       "userId": 2,
       "id": 9
-    },
-    {
-      "classId": 1,
-      "userId": 2,
-      "id": 10
     },
     {
       "classId": 1,
@@ -114,6 +120,16 @@
       "classId": 1,
       "userId": 3,
       "id": 22
+    },
+    {
+      "classId": 5,
+      "userId": 4,
+      "id": 23
+    },
+    {
+      "classId": 1,
+      "userId": 4,
+      "id": 24
     }
   ]
 }
