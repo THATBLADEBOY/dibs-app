@@ -8,7 +8,9 @@ export default class EventEditForm extends Component{
         date: "",
         time: "",
         description: "",
-        trainerId: ""
+        trainerId: "",
+        spots: "",
+        spotsTaken: ""
       };
 
   handleFieldChange = evt => {
@@ -23,7 +25,9 @@ export default class EventEditForm extends Component{
         date:classes.date,
         time:classes.time,
         description:classes.description,
-        trainerId:classes.trainerId
+        trainerId:classes.trainerId,
+        spots:classes.spots,
+        spotsTaken:classes.spotsTaken
       })
     })
   }
@@ -36,7 +40,10 @@ export default class EventEditForm extends Component{
         date: this.state.date,
         time:this.state.time,
         description:this.state.description,
-        trainerId:this.state.trainerId
+        trainerId:this.state.trainerId,
+        spots: this.state.spots,
+        spotsTaken: this.state.spotsTaken
+
       }
       this.props.updateClass(this.props.match.params.classesId, existingClass)
       .then(() => this.props.history.push("/"))

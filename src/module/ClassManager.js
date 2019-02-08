@@ -32,5 +32,8 @@ export default {
     .then(e => e.json())
     .then(() => fetch(`http://localhost:5002/classes`))
     .then(e => e.json())
+},
+getUsersInClass(classId) {
+  return fetch(`${remoteURL}/userClasses?classId=${classId}&_expand=user`).then(e => e.json());
 }
 }

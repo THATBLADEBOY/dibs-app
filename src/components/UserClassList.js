@@ -43,13 +43,13 @@ export class UserClassList extends Component {
         {this.props.userClasses.map(eachClass => 
         <div className="class-container" key={eachClass.id}>
             <h3>{eachClass.class.className}</h3>
-            <p>{eachClass.class.description}</p>
-            <p>{eachClass.class.date}</p>
-            <p>{eachClass.class.trainer}</p>
-            <Button color="danger" onClick={() => {
+            <p>{eachClass.class.date} {eachClass.class.time}</p>
+            <p>with {eachClass.class.trainerId}</p>
+            <Button className="drop-class-button" color="danger" onClick={() => {
                     let deleteConfirmation = window.confirm(`Are you sure you want to delete ${eachClass.class.className} on ${eachClass.class.date}?`)
                     if(deleteConfirmation === true) {
                     this.props.deleteUserClass(eachClass.id)
+                    this.props.removeSpotFromClass(eachClass.class)
                     }}}>Drop Class</Button>
         </div>
         

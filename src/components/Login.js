@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import { Button } from 'reactstrap';
 
 export class Login extends Component {
     state = {
         password: "",
-        email: ""
+        email: "",
+        inputValue: ""
     }
 
     // Update state whenever an input field is edited
@@ -30,15 +32,19 @@ export class Login extends Component {
 
             // console.log(authenticated.id)
 
-            sessionStorage.setItem(
-                "userId",
-                authenticated.id)
+           console.log(this.state.inputValue) 
 
             if (authenticated === undefined){
                 alert("Whoops! We we couldn't find your account. Please re-renter a valid username and email or sign up below!")
-                window.location.reload()
                 // this.props.history.push("/register")
             } else {
+
+                sessionStorage.setItem(
+                    "userId",
+                    authenticated.id)
+                sessionStorage.setItem(
+                    "trainerStatus",
+                authenticated.trainerStatus)
                 // Taking user to news page
                 this.props.getUserClasses();
                 this.props.history.push("/")
@@ -50,10 +56,12 @@ export class Login extends Component {
     return (
         <section className="login">
         <form className="registerContainer" onSubmit={this.handleLogin}>
-            <h2>Please sign in</h2>
+            <h1 className="dibs">dibs</h1>
             <label htmlFor="inputUsername">
-            </label> <br></br>
-            <input onChange={this.handleFieldChange} type="email"
+            </label>
+            <input
+            
+            onChange={this.handleFieldChange} type="email"
                 id="email"
                 placeholder="Email"
                 required autoFocus="" />
@@ -61,7 +69,7 @@ export class Login extends Component {
             <label htmlFor="inputEmail">
             </label>
             <br></br>
-            <input onChange={this.handleFieldChange} type="password"
+            <input  onChange={this.handleFieldChange} type="password"
                 id="password"
                 placeholder="Password"
                 required />
@@ -70,9 +78,9 @@ export class Login extends Component {
             {/* <button type="submit" className="btn btn-primary signIn">
                 Sign in
             </button> */}
-            <button type="submit" className="btn btn-primary signIn" >Sign in</button>
-
-            <p className="signUp">Don't have an account?</p>
+            <br></br>
+            <Button color="" type="submit" className="btn btn-primary signIn" >Sign in</Button>{' '}
+            <Button onClick={() => this.props.history.push("/user/register")} className="registration-button">Register</Button>
         </form>
     </section>
     )

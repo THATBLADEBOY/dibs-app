@@ -15,6 +15,30 @@
       "email": "sinatra@gmail.com",
       "password": "pw",
       "trainerStatus": true
+    },
+    {
+      "id": 3,
+      "firstName": "Duke",
+      "lastName": "Ellington",
+      "email": "duke@gmail.com",
+      "password": "pw",
+      "trainerStatus": false
+    },
+    {
+      "firstName": "Dean",
+      "lastName": "Martin",
+      "email": "dean@dino.com",
+      "password": "pw",
+      "trainerStatus": false,
+      "id": 4
+    },
+    {
+      "firstName": "Sammy",
+      "lastName": "Davis",
+      "email": "sam@mail.com",
+      "password": "pw",
+      "trainerStatus": true,
+      "id": 5
     }
   ],
   "classes": [
@@ -22,33 +46,61 @@
       "className": "Spin Class",
       "date": "01/01/2020",
       "time": "5:00pm",
-      "description": "This is a class where your ride a bike but don't actually go anywhere.",
-      "trainerId": 1,
+      "description": "This is a class where you ride a bike but don't actually go anywhere.",
+      "trainerId": "Dean Martin",
+      "spots": 5,
+      "spotsTaken": 2,
       "id": 1
     },
     {
-      "id": 2,
       "className": "Kickboxing",
       "date": "01/02/2020",
       "time": "6:00pm",
       "description": "It's like boxing with your feet.",
-      "trainerId": 1
+      "trainerId": "Sammy Davis Jr.",
+      "spots": 10,
+      "spotsTaken": 3,
+      "id": 2
     },
     {
       "className": "Kickboxing2234",
       "date": "01/02/2020",
       "time": "6:00pm",
       "description": "It's like boxing with your feet.",
-      "trainerId": 1,
+      "trainerId": "Ella Fitzgerald",
+      "spots": 10,
+      "spotsTaken": 3,
       "id": 3
     },
     {
       "className": "Test",
       "date": "2019-02-20",
-      "time": "6:00pm",
+      "time": "7:00pm",
       "description": "TESTING",
-      "trainerId": "1",
+      "trainerId": "Louis Armstrong",
+      "spots": 10,
+      "spotsTaken": 3,
       "id": 4
+    },
+    {
+      "className": "Hot Yoga",
+      "date": "2019-02-28",
+      "time": "6:00pm",
+      "description": "Yoga that makes you more sweaty than regular yoga.",
+      "trainerId": "Frank Sinatra",
+      "spots": 15,
+      "spotsTaken": 15,
+      "id": 5
+    },
+    {
+      "className": "HIIT",
+      "date": "2019-02-28",
+      "time": "3:00pm",
+      "description": "This class just gets harder and harder. Not for the faint of heart.",
+      "trainerId": "Bing Crosby",
+      "spots": "12",
+      "spotsTaken": 0,
+      "id": 6
     }
   ],
   "userClasses": [
@@ -56,11 +108,6 @@
       "id": 4,
       "userId": 1,
       "classId": 2
-    },
-    {
-      "classId": 4,
-      "userId": 2,
-      "id": 7
     },
     {
       "classId": 2,
@@ -71,11 +118,6 @@
       "classId": 1,
       "userId": 2,
       "id": 9
-    },
-    {
-      "classId": 1,
-      "userId": 2,
-      "id": 10
     },
     {
       "classId": 1,
@@ -99,23 +141,23 @@
     },
     {
       "classId": 2,
-      "userId": 2,
-      "id": 16
+      "userId": 3,
+      "id": 21
     },
     {
-      "classId": 4,
-      "userId": 2,
-      "id": 17
+      "classId": 1,
+      "userId": 3,
+      "id": 22
     },
     {
-      "classId": 2,
-      "userId": 2,
-      "id": 18
+      "classId": 5,
+      "userId": 4,
+      "id": 23
     },
     {
-      "classId": 2,
-      "userId": 2,
-      "id": 19
+      "classId": 1,
+      "userId": 4,
+      "id": 24
     }
   ]
 }

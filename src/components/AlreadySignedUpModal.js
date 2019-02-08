@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-class ModalExample extends React.Component {
+class AlreadySignedUpModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,18 +18,16 @@ class ModalExample extends React.Component {
   }
 
   render() {
-      const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
 
       return (
       <div>
         <Button color="info" onClick={this.toggle}>info</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle} close={closeBtn}>{this.props.classTitle}</ModalHeader>
           <ModalBody>
-            {this.props.classInfo}
+            You're already signed up for this class!
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Sweet, Thanks!</Button>
+            <Button color="primary" onClick={this.toggle}>Ok</Button>
           </ModalFooter>
         </Modal>
       </div>
@@ -37,4 +35,4 @@ class ModalExample extends React.Component {
   }
 }
 
-export default ModalExample;
+export default AlreadySignedUpModal

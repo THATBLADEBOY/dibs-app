@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-class ModalExample extends React.Component {
+class UsersInClassModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,16 +17,19 @@ class ModalExample extends React.Component {
     });
   }
 
+ 
+
   render() {
       const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
 
+     
       return (
       <div>
-        <Button color="info" onClick={this.toggle}>info</Button>
+        <Button color="edit" onClick={this.toggle}>spots filled</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle} close={closeBtn}>{this.props.classTitle}</ModalHeader>
           <ModalBody>
-            {this.props.classInfo}
+             
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>Sweet, Thanks!</Button>
@@ -37,4 +40,4 @@ class ModalExample extends React.Component {
   }
 }
 
-export default ModalExample;
+export default UsersInClassModal;
