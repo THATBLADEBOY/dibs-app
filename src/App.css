@@ -13,7 +13,10 @@ h2 {
 }
 
 .class-container {
-  background: #f0f0f0;
+  background-image: url(../src/imgs/Asset\ 2.png);
+  background-position: center;
+  background-size: cover;
+  /* background: #f0f0f0; */
   max-width: 45%;
   min-width: 45%;
   margin: 2%;
@@ -21,6 +24,7 @@ h2 {
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 5px 5px 12px #d8d8d8;
+  color: aliceblue;
   /* justify-content: center;
   flex-wrap: wrap; */
 }

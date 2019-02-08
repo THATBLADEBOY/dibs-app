@@ -9,6 +9,7 @@ import ClassForm from './components/ClassForm'
 import ClassEditForm from './components/ClassEditForm'
 import RegistrationForm from './components/RegistrationForm'
 import TrainerRegistration from './components/TrainerRegistration'
+import AlreadySignedUpModal from './components/AlreadySignedUpModal'
 
 export class ApplicationViews extends Component {
 
@@ -16,7 +17,8 @@ export class ApplicationViews extends Component {
         users: [],
         classes: [],
         userClasses: [],
-        currentUserId: ""
+        currentUserId: "",
+        spotsTaken: ""
       }
 
 componentDidMount() {
@@ -43,20 +45,33 @@ getUserClasses = () => {
 }
 
 
-dibsFunction = (classId) => {
+addSpotToClass = (theClass) => {
 
-  let classesAlreadySignedUpFor = this.state.userClasses.map(eachClass => {
-    return eachClass.class.id
-  })
+  const existingClass = {
+    className: theClass.className,
+    date: theClass.date,
+    time: theClass.time,
+    description: theClass.description,
+    trainerId: theClass.trainerId,
+    spots: theClass.spots,
+    spotsTaken: theClass.spotsTaken + 1
+  }
+  this.updateClass(theClass.id, existingClass)
+}
 
-  console.log(this.state.userClasses)
 
-  console.log(classesAlreadySignedUpFor);
+dibsFunction = (classId, spotCount) => {
+
+let classesAlreadySignedUpFor = this.state.userClasses.map(eachClass => {
+  return eachClass.class.id
+})
+
  let alreadySignedUp = classesAlreadySignedUpFor.includes(classId);
 
  if(alreadySignedUp === true) {
    alert("You're already signed up!")
  } else {
+  
   const currentUser = sessionStorage.getItem("userId");
   const currentUserId = Number(currentUser);
   const newUserClass = {
@@ -64,6 +79,7 @@ dibsFunction = (classId) => {
       userId: currentUserId
   }
   this.addUserClass(newUserClass)
+
  }
   
 }
@@ -135,7 +151,7 @@ updateComponent = () => {
           return <TrainerRegistration {...props} addUser={this.addUser} />
         }} />
         <Route exact path="/" render={(props) => {
-          return <Dashboard {...props} dibsFunction={this.dibsFunction} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
+          return <Dashboard {...props} addSpotToClass={this.addSpotToClass}dibsFunction={this.dibsFunction} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
         }} />
         <Route path="/newclass" render={(props) => {
           return <ClassForm {...props} addClass={this.addClass}/>
