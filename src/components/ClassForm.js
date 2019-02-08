@@ -11,7 +11,9 @@ export default class ClassForm extends Component {
     date: "",
     time: "",
     description: "",
-    trainerId: ""
+    trainerId: "",
+    spots: "",
+    spotsTaken: ""
   };
 
 
@@ -40,7 +42,9 @@ export default class ClassForm extends Component {
         date: this.state.date,
         time: this.state.time,
         description: this.state.description,
-        trainerId: this.state.trainerId
+        trainerId: this.state.trainerId,
+        spots: this.state.spots,
+        spotsTaken: 0
       };
 
       // Create the event and redirect user to event list
@@ -107,6 +111,17 @@ export default class ClassForm extends Component {
               onChange={this.handleFieldChange}
               id="trainerId"
               placeholder="Trainer"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="spots">Spots Available</label>
+            <input
+              type="number"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="spots"
+              placeholder="Spots"
             />
           </div>
           <div className="add-class-form-buttons">

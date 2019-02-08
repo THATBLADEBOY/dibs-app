@@ -46,21 +46,21 @@
       "className": "Spin Class",
       "date": "01/01/2020",
       "time": "5:00pm",
-      "description": "This is a class where your ride a bike but don't actually go anywhere.",
-      "trainerId": 1,
+      "description": "This is a class where you ride a bike but don't actually go anywhere.",
+      "trainerId": "Dean Martin",
       "spots": 5,
       "spotsTaken": 2,
       "id": 1
     },
     {
-      "id": 2,
       "className": "Kickboxing",
       "date": "01/02/2020",
       "time": "6:00pm",
       "description": "It's like boxing with your feet.",
+      "trainerId": "Sammy Davis Jr.",
       "spots": 10,
       "spotsTaken": 3,
-      "trainerId": 1
+      "id": 2
     },
     {
       "className": "Kickboxing2234",
@@ -91,6 +91,16 @@
       "spots": 15,
       "spotsTaken": 15,
       "id": 5
+    },
+    {
+      "className": "HIIT",
+      "date": "2019-02-28",
+      "time": "3:00pm",
+      "description": "This class just gets harder and harder. Not for the faint of heart.",
+      "trainerId": "Bing Crosby",
+      "spots": "12",
+      "spotsTaken": 0,
+      "id": 6
     }
   ],
   "userClasses": [

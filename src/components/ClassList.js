@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import UserClassManager from '../module/UserClassManager'
 import ModalExample from './Modal'
+import UsersInClassModal from './UsersInClassModal'
 
 export class ClassList extends Component {
 
@@ -36,6 +37,8 @@ export class ClassList extends Component {
                 <p>with {classes.trainerId}</p>
                 <p>{classes.spotsTaken} of {classes.spots} seats filled.</p>
                 <div className="buttons-container">
+                <UsersInClassModal usersInClass={this.props.getUsersInClass}/>
+
                 {/* <Button className="dibs-button" onClick={() => {
                     const currentUser = sessionStorage.getItem("userId");
                     const currentUserId = Number(currentUser);
