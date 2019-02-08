@@ -67,19 +67,19 @@
       "date": "01/02/2020",
       "time": "6:00pm",
       "description": "It's like boxing with your feet.",
+      "trainerId": "Ella Fitzgerald",
       "spots": 10,
       "spotsTaken": 3,
-      "trainerId": 1,
       "id": 3
     },
     {
       "className": "Test",
       "date": "2019-02-20",
-      "time": "6:00pm",
+      "time": "7:00pm",
       "description": "TESTING",
-      "trainerId": "1",
+      "trainerId": "Louis Armstrong",
       "spots": 10,
-      "spotsTaken": 8,
+      "spotsTaken": 3,
       "id": 4
     },
     {
