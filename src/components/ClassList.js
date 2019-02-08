@@ -46,8 +46,7 @@ export class ClassList extends Component {
                     this.props.addUserClass(newUserClass);
                 }} color="primary">dibs</Button> */}
                 <Button className="dibs-button" onClick={() => {
-                    this.props.dibsFunction(classes.id)
-                    this.props.addSpotToClass(classes)
+                    this.props.dibsFunction(classes.id, classes)
                 }} color="primary">dibs</Button>
                 <ModalExample classInfo={classes.description} classTitle={classes.className}/>
                 </div>

@@ -74,7 +74,7 @@ removeSpotFromClass = (theClass) => {
 }
 
 
-dibsFunction = (classId, spotCount) => {
+dibsFunction = (classId, theClass) => {
 
 let classesAlreadySignedUpFor = this.state.userClasses.map(eachClass => {
   return eachClass.class.id
@@ -84,6 +84,8 @@ let classesAlreadySignedUpFor = this.state.userClasses.map(eachClass => {
 
  if(alreadySignedUp === true) {
    alert("You're already signed up!")
+ } else if(theClass.spots === theClass.spotsTaken) {
+  alert("Sorry, that class is full!")
  } else {
   
   const currentUser = sessionStorage.getItem("userId");
@@ -93,6 +95,7 @@ let classesAlreadySignedUpFor = this.state.userClasses.map(eachClass => {
       userId: currentUserId
   }
   this.addUserClass(newUserClass)
+  this.addSpotToClass(theClass)
 
  }
   
