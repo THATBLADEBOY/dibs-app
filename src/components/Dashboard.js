@@ -13,7 +13,7 @@ export class Dashboard extends Component {
         <Button color="success" className="add-class-button"
         onClick={() => {this.props.history.push("/newclass")}}
         >Add Class</Button>}
-        <UserClassList userClasses={this.props.userClasses} deleteUserClass={this.props.deleteUserClass} />
+        <UserClassList removeSpotFromClass={this.props.removeSpotFromClass} userClasses={this.props.userClasses} deleteUserClass={this.props.deleteUserClass} />
         <ClassList addSpotToClass={this.props.addSpotToClass} dibsFunction={this.props.dibsFunction} userClasses={this.props.userClasses} classes={this.props.classes} history={this.props.history} addUserClass={this.props.addUserClass} />
       </div>
     )

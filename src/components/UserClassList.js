@@ -49,6 +49,7 @@ export class UserClassList extends Component {
                     let deleteConfirmation = window.confirm(`Are you sure you want to delete ${eachClass.class.className} on ${eachClass.class.date}?`)
                     if(deleteConfirmation === true) {
                     this.props.deleteUserClass(eachClass.id)
+                    this.props.removeSpotFromClass(eachClass.class)
                     }}}>Drop Class</Button>
         </div>
         

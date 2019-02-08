@@ -79,7 +79,7 @@
       "description": "TESTING",
       "trainerId": "1",
       "spots": 10,
-      "spotsTaken": 6,
+      "spotsTaken": 8,
       "id": 4
     },
     {
@@ -148,11 +148,6 @@
       "classId": 1,
       "userId": 4,
       "id": 24
-    },
-    {
-      "classId": 4,
-      "userId": 2,
-      "id": 25
     }
   ]
 }

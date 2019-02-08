@@ -59,6 +59,20 @@ addSpotToClass = (theClass) => {
   this.updateClass(theClass.id, existingClass)
 }
 
+removeSpotFromClass = (theClass) => {
+
+  const existingClass = {
+    className: theClass.className,
+    date: theClass.date,
+    time: theClass.time,
+    description: theClass.description,
+    trainerId: theClass.trainerId,
+    spots: theClass.spots,
+    spotsTaken: theClass.spotsTaken - 1
+  }
+  this.updateClass(theClass.id, existingClass)
+}
+
 
 dibsFunction = (classId, spotCount) => {
 
@@ -151,7 +165,7 @@ updateComponent = () => {
           return <TrainerRegistration {...props} addUser={this.addUser} />
         }} />
         <Route exact path="/" render={(props) => {
-          return <Dashboard {...props} addSpotToClass={this.addSpotToClass}dibsFunction={this.dibsFunction} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
+          return <Dashboard {...props} removeSpotFromClass={this.removeSpotFromClass} addSpotToClass={this.addSpotToClass}dibsFunction={this.dibsFunction} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
         }} />
         <Route path="/newclass" render={(props) => {
           return <ClassForm {...props} addClass={this.addClass}/>
