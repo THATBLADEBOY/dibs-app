@@ -38,16 +38,6 @@ export class ClassList extends Component {
                 <p>{classes.spotsTaken} of {classes.spots} seats filled.</p>
                 <div className="buttons-container">
                 <UsersInClassModal usersInClass={this.props.getUsersInClass}/>
-
-                {/* <Button className="dibs-button" onClick={() => {
-                    const currentUser = sessionStorage.getItem("userId");
-                    const currentUserId = Number(currentUser);
-                    const newUserClass = {
-                        classId: classes.id,
-                        userId: currentUserId
-                    }
-                    this.props.addUserClass(newUserClass);
-                }} color="primary">dibs</Button> */}
                 <Button className="dibs-button" onClick={() => {
                     this.props.dibsFunction(classes.id, classes)
                 }} color="primary">dibs</Button>
