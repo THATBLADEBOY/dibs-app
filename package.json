@@ -6,6 +6,8 @@
     "bootstrap": "^4.2.1",
     "rc-time-picker": "^3.6.2",
     "react": "^16.7.0",
+    "react-add-to-calendar": "^0.1.5",
+    "react-add-to-calendar-hoc": "^1.0.7",
     "react-dom": "^16.7.0",
     "react-moment": "^0.8.4",
     "react-router-dom": "^4.3.1",
