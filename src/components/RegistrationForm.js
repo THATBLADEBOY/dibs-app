@@ -52,7 +52,7 @@ export default class RegistrationForm extends Component {
 
   render() {
     return (
-      <React.Fragment className="registration-page">
+      <React.Fragment >
         <form className="registrationForm">
         <h2>Welcome to</h2>
         <h1 className="dibs">dibs</h1>

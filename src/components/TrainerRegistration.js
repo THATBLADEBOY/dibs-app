@@ -52,7 +52,7 @@ export default class TrainerRegistration extends Component {
 
   render() {
     return (
-      <React.Fragment className="registration-page">
+      <React.Fragment >
         <form className="registrationForm">
         <h2>Add a New Trainer</h2>
         <p>Adding a new trainer gives this person right to add and edit classes. If you

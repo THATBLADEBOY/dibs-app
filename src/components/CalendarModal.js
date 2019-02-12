@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-class ModalExample extends React.Component {
+class CalendarModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,13 +26,7 @@ class ModalExample extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle} close={closeBtn}>{this.props.classTitle}</ModalHeader>
           <ModalBody>
-            <strong>{this.props.classInfo}</strong>
-            <br/>
-            <br/>
-            <strong>Trainer:</strong> {this.props.classTrainer}
-            <br/>
-            <br/>
-            <strong>Expected Duration:</strong> {this.props.duration}
+            {this.props.classInfo}
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>Sweet, Thanks!</Button>
@@ -43,4 +37,4 @@ class ModalExample extends React.Component {
   }
 }
 
-export default ModalExample;
+export default CalendarModal;

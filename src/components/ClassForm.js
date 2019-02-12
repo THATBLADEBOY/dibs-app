@@ -56,7 +56,7 @@ export default class ClassForm extends Component {
 
   render() {
     return (
-      <React.Fragment className="add-form-page">
+      <React.Fragment >
         <form className="classForm">
           <div className="form-group">
             <label htmlFor="className">Class Name</label>
