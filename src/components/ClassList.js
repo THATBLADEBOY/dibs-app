@@ -3,13 +3,13 @@ import { Button } from 'reactstrap';
 import UserClassManager from '../module/UserClassManager'
 import ModalExample from './Modal'
 import UsersInClassModal from './UsersInClassModal'
+import Moment from 'react-moment';
 
 export class ClassList extends Component {
 
 
 
 
-    
 
 
   render() {
@@ -33,7 +33,9 @@ export class ClassList extends Component {
                 <Button className="edit-button" onClick={() => {this.props.history.push(`/${classes.id}/edit`)}} color="link">Edit</Button>
                 }
                 </div>
-                <p>{classes.date} {classes.time}</p>
+                
+                <Moment format="ddd MMM DD, YYYY">{classes.date}</Moment>
+                <p>{classes.time}</p>
                 <p>with {classes.trainerId}</p>
                 <p>{classes.spotsTaken} of {classes.spots} seats filled.</p>
                 <div className="buttons-container">
@@ -41,7 +43,9 @@ export class ClassList extends Component {
                 <Button className="dibs-button" onClick={() => {
                     this.props.dibsFunction(classes.id, classes)
                 }} color="primary">dibs</Button>
-                <ModalExample classInfo={classes.description} classTitle={classes.className}/>
+                <ModalExample classInfo={classes.description} classTitle={classes.className}
+                classTrainer={classes.trainerId}
+                duration={classes.duration}/>
                 </div>
                 
                 
