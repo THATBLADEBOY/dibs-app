@@ -45,8 +45,7 @@
     {
       "className": "Spin Class",
       "date": "01/01/2020",
-      "time": "5:00pm",
-      "duration": "45 minutes",
+      "time": "7:00pm",
       "description": "This is a class where you ride a bike but don't actually go anywhere.",
       "trainerId": "Dean Martin",
       "spots": 5,
@@ -163,7 +162,7 @@
     {
       "classId": 1,
       "userId": 2,
-      "id": 26
+      "id": 25
     }
   ]
 }
