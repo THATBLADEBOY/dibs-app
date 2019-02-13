@@ -16,9 +16,7 @@ export class ClassCard extends Component {
         <Button className="edit-button" onClick={() => {this.props.history.push(`/${classes.id}/edit`)}} color="link">Edit</Button>
         }
         </div>
-        
-        <Moment format="ddd MMM DD, YYYY">{classes.date}</Moment>
-        <p>{classes.time}</p>
+        <Moment format="LLLL">{classes.date}</Moment>
         <p>with {classes.trainerId}</p>
         <p>{classes.spotsTaken} of {classes.spots} seats filled.</p>
         <div className="buttons-container">

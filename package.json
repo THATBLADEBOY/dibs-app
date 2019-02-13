@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "moment": "^2.24.0",
     "rc-time-picker": "^3.6.2",
     "react": "^16.7.0",
     "react-add-to-calendar": "^0.1.5",

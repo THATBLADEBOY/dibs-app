@@ -9,7 +9,7 @@ export default class ClassForm extends Component {
   state = {
     className: "",
     date: "",
-    time: "",
+    duration: "",
     description: "",
     trainerId: "",
     spots: "",
@@ -34,8 +34,14 @@ export default class ClassForm extends Component {
       window.alert("Please enter a name for your class.");
     } else if (this.state.date === "") {
       window.alert("Please enter a date for your class.")
-    } else if (this.state.time === "") {
-      window.alert("Please enter a time for your class.")
+    } else if (this.state.duration === "") {
+      window.alert("Please enter a duration for your class.")
+    } else if (this.state.description === "") {
+      window.alert("Please enter a description for your class.")
+    } else if (this.state.trainerId === "") {
+      window.alert("Please enter a trainer for your class.")
+    } else if (this.state.spots === "") {
+      window.alert("Please enter number of spots for your class.")
     } else {
       const newClass = {
         className: this.state.className,
@@ -70,25 +76,25 @@ export default class ClassForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="date">Date</label>
+            <label htmlFor="date">Date &amp; Time</label>
             <input
-              type="date"
+              type="datetime-local"
               required
               className="form-control"
               onChange={this.handleFieldChange}
               id="date"
-              placeholder="Date"
+              placeholder="Date &amp; Time"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="time">Time</label>
+          <label htmlFor="duration">Duration</label>
             <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
-              id="time"
-              placeholder="Time of Class"
+              id="duration"
+              placeholder="45 minutes"
             />
           </div>
           <div className="form-group">
