@@ -72,7 +72,7 @@ export default class ClassForm extends Component {
           <div className="form-group">
             <label htmlFor="date">Date</label>
             <input
-              type="date"
+              type="datetime-local"
               required
               className="form-control"
               onChange={this.handleFieldChange}
