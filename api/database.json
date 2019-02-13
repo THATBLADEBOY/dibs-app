@@ -108,34 +108,14 @@
       "id": 7
     },
     {
-      "className": "asdf",
-      "date": "2019-02-13T01:00",
-      "time": "6:00pm",
-      "description": "afds",
-      "trainerId": "adfas",
-      "spots": "49",
-      "spotsTaken": 0,
-      "id": 8
-    },
-    {
       "className": "adsf",
       "date": "2019-02-20T13:02",
       "time": "6:00pm",
       "description": "asdfadf",
       "trainerId": "asdf",
       "spots": "1",
-      "spotsTaken": 1,
+      "spotsTaken": 0,
       "id": 9
-    },
-    {
-      "className": "KickBoxing",
-      "date": "2019-02-03T16:00",
-      "time": "2:00 pm",
-      "description": "Testing time",
-      "trainerId": "Frank",
-      "spots": "1",
-      "spotsTaken": 1,
-      "id": 10
     },
     {
       "className": "Weight Circuit",
@@ -202,16 +182,6 @@
       "classId": 1,
       "userId": 2,
       "id": 25
-    },
-    {
-      "classId": 9,
-      "userId": 2,
-      "id": 26
-    },
-    {
-      "classId": 10,
-      "userId": 2,
-      "id": 27
     }
   ]
 }

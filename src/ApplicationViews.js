@@ -10,6 +10,7 @@ import ClassEditForm from './components/ClassEditForm'
 import RegistrationForm from './components/RegistrationForm'
 import TrainerRegistration from './components/TrainerRegistration'
 import AlreadySignedUpModal from './components/AlreadySignedUpModal'
+import QuoteManager from './module/QuoteManager'
 
 export class ApplicationViews extends Component {
 
@@ -19,10 +20,16 @@ export class ApplicationViews extends Component {
         userClasses: [],
         currentUserId: "",
         spotsTaken: "",
-        usersInClass: []
+        usersInClass: [],
+        quoteInfo: ""
       }
 
 componentDidMount() {
+
+QuoteManager.get().then(quoteInfo => {
+  this.setState({ quoteInfo })
+})
+
 
 UsersManager.getAll().then(allUsers => {
     this.setState({ users: allUsers });
@@ -178,7 +185,7 @@ updateComponent = () => {
           return <TrainerRegistration {...props} addUser={this.addUser} />
         }} />
         <Route exact path="/" render={(props) => {
-          return <Dashboard {...props} getUsersInClass={this.getTheUsersInClass} removeSpotFromClass={this.removeSpotFromClass} addSpotToClass={this.addSpotToClass}dibsFunction={this.dibsFunction} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
+          return <Dashboard {...props} quoteInfo={this.state.quoteInfo} getUsersInClass={this.getTheUsersInClass} removeSpotFromClass={this.removeSpotFromClass} addSpotToClass={this.addSpotToClass}dibsFunction={this.dibsFunction} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
         }} />
         <Route path="/newclass" render={(props) => {
           return <ClassForm {...props} addClass={this.addClass}/>

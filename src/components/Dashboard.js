@@ -9,6 +9,8 @@ export class Dashboard extends Component {
     let isTrainer = sessionStorage.getItem("trainerStatus");
     return (
       <div>
+        <br/>
+        <p className="text-muted"><i>{this.props.quoteInfo.value}</i></p>
         {isTrainer === "true" &&
         <Button color="success" className="add-class-button"
         onClick={() => {this.props.history.push("/newclass")}}
