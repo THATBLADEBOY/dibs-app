@@ -42,7 +42,7 @@ getUsersInClass = (classId) => {
           <ModalHeader toggle={this.toggle} close={closeBtn}>People Who Called dibs on {this.props.theClass.className}:</ModalHeader>
           <ModalBody>
            {this.state.usersInClass.map(user =>
-            <div key={user.user.id}>{user.user.firstName}</div>)}
+            <div key={user.user.id}>{user.user.firstName} {user.user.lastName}</div>)}
              
           </ModalBody>
           <ModalFooter>
