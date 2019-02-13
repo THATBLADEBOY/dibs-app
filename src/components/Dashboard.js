@@ -9,12 +9,14 @@ export class Dashboard extends Component {
     let isTrainer = sessionStorage.getItem("trainerStatus");
     return (
       <div>
+        <br/>
+        <p className="text-muted"><i>{this.props.quoteInfo.value}</i></p>
         {isTrainer === "true" &&
         <Button color="success" className="add-class-button"
         onClick={() => {this.props.history.push("/newclass")}}
         >Add Class</Button>}
         <UserClassList removeSpotFromClass={this.props.removeSpotFromClass} userClasses={this.props.userClasses} deleteUserClass={this.props.deleteUserClass} />
-        <ClassList getUsersInClass={this.props.getUsersInClass} addSpotToClass={this.props.addSpotToClass} dibsFunction={this.props.dibsFunction} userClasses={this.props.userClasses} classes={this.props.classes} history={this.props.history} addUserClass={this.props.addUserClass} />
+        <ClassList usersInClass={this.props.usersInClass} getUsersInClass={this.props.getUsersInClass} addSpotToClass={this.props.addSpotToClass} dibsFunction={this.props.dibsFunction} userClasses={this.props.userClasses} classes={this.props.classes} history={this.props.history} addUserClass={this.props.addUserClass} />
       </div>
     )
   }

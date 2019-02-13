@@ -6,7 +6,7 @@ export default class EventEditForm extends Component{
     state = {
         className: "",
         date: "",
-        time: "",
+        duration: "",
         description: "",
         trainerId: "",
         spots: "",
@@ -23,7 +23,7 @@ export default class EventEditForm extends Component{
       this.setState({
         className:classes.className,
         date:classes.date,
-        time:classes.time,
+        duration:classes.duration,
         description:classes.description,
         trainerId:classes.trainerId,
         spots:classes.spots,
@@ -64,7 +64,7 @@ export default class EventEditForm extends Component{
                 </div>
                 <div className="form-group">
                     <label htmlFor="date">Class Date</label>
-                    <input type="date" required
+                    <input type="datetime-local" required
                           className="form-control"
                           onChange={this.handleFieldChange}
                           id="date"
@@ -72,17 +72,17 @@ export default class EventEditForm extends Component{
                           />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="time">Class Time</label>
+                    <label htmlFor="duration">Duration</label>
                     <input type="text" required
                           className="form-control"
                           onChange={this.handleFieldChange}
-                          id="time"
-                          value={this.state.time}
+                          id="duration"
+                          value={this.state.duration}
                           />
                 </div>
                 <div className="form-group">
                     <label htmlFor="description">Description</label>
-                    <input type="text" required
+                    <textarea type="text" required
                           className="form-control"
                           onChange={this.handleFieldChange}
                           id="description"
@@ -98,6 +98,16 @@ export default class EventEditForm extends Component{
                           value={this.state.trainerId}
                           />
                 </div>
+                <div className="form-group">
+                     <label htmlFor="spots">Spots Available</label>
+                    <input type="number"
+                        required
+                        className="form-control"
+                        onChange={this.handleFieldChange}
+                        id="spots"
+                        placeholder="Spots"
+                        />
+                </div>    
                 <button type="submit" onClick={this.updateExistingClass} className="btn btn-primary">Update</button> <button onClick={() => {this.props.history.push("/")}} className="btn btn-primary">Cancel</button>
                 <Button color="danger" className="delete-class-button" onClick={() => {
                     let deleteConfirmation = window.confirm(`Are you sure you want to delete ${this.state.className} on ${this.state.date}?`)

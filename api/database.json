@@ -44,8 +44,7 @@
   "classes": [
     {
       "className": "Spin Class",
-      "date": "01/01/2020",
-      "time": "7:00pm",
+      "date": "2019-02-18T17:30",
       "description": "This is a class where you ride a bike but don't actually go anywhere.",
       "trainerId": "Dean Martin",
       "spots": 5,
@@ -54,9 +53,7 @@
     },
     {
       "className": "Kickboxing",
-      "date": "01/02/2020",
-      "time": "6:00pm",
-      "duration": "45 minutes",
+      "date": "2019-02-20T16:00",
       "description": "It's like boxing with your feet.",
       "trainerId": "Sammy Davis Jr.",
       "spots": 10,
@@ -86,17 +83,6 @@
       "id": 5
     },
     {
-      "className": "HIIT",
-      "date": "2019-02-28",
-      "time": "3:00pm",
-      "duration": "45 minutes",
-      "description": "This class just gets harder and harder. Not for the faint of heart.",
-      "trainerId": "Bing Crosby",
-      "spots": "12",
-      "spotsTaken": 0,
-      "id": 6
-    },
-    {
       "className": "Boxing",
       "date": "2019-02-21",
       "time": "6:00pm",
@@ -108,34 +94,13 @@
       "id": 7
     },
     {
-      "className": "asdf",
-      "date": "2019-02-13T01:00",
-      "time": "6:00pm",
-      "description": "afds",
-      "trainerId": "adfas",
-      "spots": "49",
+      "className": "Boxing",
+      "date": "2019-02-20T13:00",
+      "description": "Punching a bag and trying not to get hit by said bag.",
+      "trainerId": "Sammy Davis Jr.",
+      "spots": "20",
       "spotsTaken": 0,
-      "id": 8
-    },
-    {
-      "className": "adsf",
-      "date": "2019-02-20T13:02",
-      "time": "6:00pm",
-      "description": "asdfadf",
-      "trainerId": "asdf",
-      "spots": "1",
-      "spotsTaken": 1,
       "id": 9
-    },
-    {
-      "className": "KickBoxing",
-      "date": "2019-02-03T16:00",
-      "time": "2:00 pm",
-      "description": "Testing time",
-      "trainerId": "Frank",
-      "spots": "1",
-      "spotsTaken": 1,
-      "id": 10
     },
     {
       "className": "Weight Circuit",
@@ -202,16 +167,6 @@
       "classId": 1,
       "userId": 2,
       "id": 25
-    },
-    {
-      "classId": 9,
-      "userId": 2,
-      "id": 26
-    },
-    {
-      "classId": 10,
-      "userId": 2,
-      "id": 27
     }
   ]
 }
