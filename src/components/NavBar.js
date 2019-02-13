@@ -28,6 +28,7 @@ clearSession = () => {
     });
   }
   render() {
+    let isTrainer = sessionStorage.getItem("trainerStatus");
     return (
       <div>
         <Navbar color="light" light expand="md">
@@ -35,9 +36,11 @@ clearSession = () => {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+            {isTrainer === "true" &&
               <NavItem>
               <NavLink href="/trainer/register">Add Trainer</NavLink>
               </NavItem>
+            }
               <NavItem>
               <NavLink onClick={this.clearSession} href="/login">logout</NavLink>
               </NavItem>

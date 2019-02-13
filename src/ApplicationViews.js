@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Login from "./components/Login"
 import UsersManager from "./module/UsersManager"
 import Dashboard from './components/Dashboard';
@@ -9,7 +9,6 @@ import ClassForm from './components/ClassForm'
 import ClassEditForm from './components/ClassEditForm'
 import RegistrationForm from './components/RegistrationForm'
 import TrainerRegistration from './components/TrainerRegistration'
-import AlreadySignedUpModal from './components/AlreadySignedUpModal'
 import QuoteManager from './module/QuoteManager'
 
 export class ApplicationViews extends Component {
@@ -48,7 +47,6 @@ getUserClasses = () => {
     const currentUser = sessionStorage.getItem("userId");
     const currentUserId = Number(currentUser);
     this.setState({currentUserId: currentUserId})
-    console.log("userID", currentUserId);
     UserClassManager.getUserSpecificClasses(currentUserId).then(allClasses => {
     this.setState({ userClasses: allClasses })
 })

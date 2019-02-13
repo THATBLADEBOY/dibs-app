@@ -16,10 +16,6 @@ export class UserClassCard extends Component {
     }
 
   render() {
-     var moment = require('moment');
-      let startDateTime = new Date(this.props.eachClass.class.date).toISOString();
-      let endDateTime = moment(startDateTime).add(30, 'm').toDate();
-      console.log("HMMMM...", startDateTime, endDateTime)
       let eachClass = this.props.eachClass
     return (
         <div className="class-container" key={eachClass.id}>

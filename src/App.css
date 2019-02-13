@@ -8,6 +8,40 @@
   font-weight: 900;
 }
 
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.editForm {
+  margin-bottom: 5%;
+}
+
+.add-class-button {
+  position: fixed;
+  bottom:0;
+  right: 0;
+  width: 100%;
+  border-radius: 0px;
+}
+
+.delete-class-button {
+  position: fixed;
+  bottom:0;
+  right: 0;
+  width: 100%;
+  border-radius: 0px;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+
+
+
+
 h2 {
   font-weight: 900;
 }
@@ -48,31 +82,8 @@ h2 {
   margin-bottom: 2%;
 }
 
-.add-class-button {
-    position: fixed;
-    bottom:0;
-    right: 0;
-    width: 100%;
-    border-radius: 0px;
-}
-
-.delete-class-button {
-  position: fixed;
-  bottom:0;
-  right: 0;
-  width: 100%;
-  border-radius: 0px;
-}
-
 .available-classes {
   margin-bottom: 3%;
-}
-
-.buttons-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 2%;
-  margin-bottom: 2%;
 }
 
 .modal {
@@ -94,18 +105,10 @@ h2 {
   align-self: flex-end;
 }
 
-div>.dibs-button {
-  /* font-weight: 900; */
-}
-
 .classForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.add-class-form-buttons {
-  display: flex;
+  max-width: 50%;
+  margin: auto;
+  margin-top: 2%;
 }
 
 .login {
@@ -117,4 +120,51 @@ div>.dibs-button {
   display: flex;
   justify-content: space-between;
   margin-left: 2%;
+}
+
+.registrationForm {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 2%;
+}
+
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+ 
+  .class-container {
+    background-image: url(../src/imgs/Asset\ 2.png);
+    background-position: center;
+    background-size: cover;
+    /* background: #f0f0f0; */
+   width: 100%;
+    width: 100%;
+    margin-bottom: 2%; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 12px #d8d8d8;
+    color: aliceblue;
+    /* justify-content: center;
+    flex-wrap: wrap; */
+  }
+
+  .classForm {
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 12%;
+  }
+
+  .class-list {
+    margin-bottom: 12%;
+  }
+
+  .login {
+    margin: auto;
+    margin-top: 30%;
+  }
+  
 }

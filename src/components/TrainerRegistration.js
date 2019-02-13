@@ -55,8 +55,8 @@ export default class TrainerRegistration extends Component {
       <React.Fragment >
         <form className="registrationForm">
         <h2>Add a New Trainer</h2>
-        <p>Adding a new trainer gives this person right to add and edit classes. If you
-            don't want the user to have those rights, please have them register on the login page.
+        <p className="text-muted"><i>Adding a new trainer gives this person rights to add and edit classes. If you
+            don't want the user to have those rights, please have them register on the login page.</i>
         </p>
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>
@@ -103,18 +103,17 @@ export default class TrainerRegistration extends Component {
             />
           </div>
           <div className="register-buttons">
-          <button
+          <Button
+            color="primary"
             type="submit"
             onClick={this.constructNewUser}
-            className="btn btn-primary"
           >
             Create Account
-          </button>
+          </Button>
           {' '}
           <Button
             type="submit"
             onClick={(() => this.props.history.push("/"))}
-            className=""
           >
             Nevermind
           </Button>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from 'reactstrap';
 
 
 
@@ -64,6 +65,7 @@ export default class ClassForm extends Component {
     return (
       <React.Fragment >
         <form className="classForm">
+        <h2>Add a New Class</h2>
           <div className="form-group">
             <label htmlFor="className">Class Name</label>
             <input
@@ -131,21 +133,20 @@ export default class ClassForm extends Component {
             />
           </div>
           <div className="add-class-form-buttons">
-          <button
+          <Button
+            color="primary"
             type="submit"
             onClick={this.constructNewClass}
-            className="btn btn-primary"
           >
             Submit
-          </button>
+          </Button>
           {' '}
-          <button
+          <Button
             type="submit"
             onClick={(() => this.props.history.push("/"))}
-            className="btn btn-primary"
           >
             Nevermind
-          </button>
+          </Button>
           </div>
         </form>
       </React.Fragment>
