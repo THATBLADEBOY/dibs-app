@@ -113,3 +113,8 @@ div>.dibs-button {
   margin-top: 15%;
 }
 
+.userClass-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2%;
+}

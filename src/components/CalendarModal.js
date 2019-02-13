@@ -1,11 +1,19 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import AddToCalendar from 'react-add-to-calendar';
 
 class CalendarModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      event: {
+        title: this.props.event.title,
+        description: this.props.event.description,
+        location: '952 Main St, Nashville, TN 37206',
+        startTime: this.props.event.startTime,
+        endTime: this.props.event.endTime
+      }
     };
 
     this.toggle = this.toggle.bind(this);
@@ -22,11 +30,11 @@ class CalendarModal extends React.Component {
 
       return (
       <div>
-        <Button color="info" onClick={this.toggle}>info</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle} close={closeBtn}>{this.props.classTitle}</ModalHeader>
+        <Button color="info" onClick={this.toggle}>Add To Calendar</Button>
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+          <ModalHeader toggle={this.toggle} close={closeBtn}>Add To Calendar</ModalHeader>
           <ModalBody>
-            {this.props.classInfo}
+          <AddToCalendar optionsOpen={true} event={this.state.event}/>
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>Sweet, Thanks!</Button>

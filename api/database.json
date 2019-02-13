@@ -136,6 +136,15 @@
       "spots": "1",
       "spotsTaken": 1,
       "id": 10
+    },
+    {
+      "className": "Weight Circuit",
+      "date": "2019-02-04T17:00",
+      "description": "Circuits with cycles of 1 minutes weight lifting with a 30 second break between lift cycles. Design for those who want to build lean muscle.",
+      "trainerId": "Frank Sinatra",
+      "spots": "8",
+      "spotsTaken": 0,
+      "id": 11
     }
   ],
   "userClasses": [

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Button, Dropdown } from 'reactstrap';
+import { Button } from 'reactstrap';
 import Moment from 'react-moment';
-import AddToCalendar from 'react-add-to-calendar';
+import CalendarModal from './CalendarModal'
 
 export class UserClassCard extends Component {
 
@@ -25,10 +25,9 @@ export class UserClassCard extends Component {
         <div className="class-container" key={eachClass.id}>
         <h3>{eachClass.class.className}</h3>
         <Moment format="LLLL">{eachClass.class.date}</Moment>
-        <p>{eachClass.class.time}</p>
         <p>with {eachClass.class.trainerId}</p>
         <div className="userClass-buttons">
-        <AddToCalendar event={this.state.event}/>
+        <CalendarModal event={this.state.event} />
         <Button className="drop-class-button" color="danger" onClick={() => {
                 let deleteConfirmation = window.confirm(`Are you sure you want to delete ${eachClass.class.className} on ${eachClass.class.date}?`)
                 if(deleteConfirmation === true) {
