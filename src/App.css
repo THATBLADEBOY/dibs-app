@@ -99,14 +99,11 @@ div>.dibs-button {
 }
 
 .classForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 50%;
+  margin: auto;
+  margin-top: 2%;
 }
 
-.add-class-form-buttons {
-  display: flex;
-}
 
 .login {
   margin: auto;
@@ -117,4 +114,14 @@ div>.dibs-button {
   display: flex;
   justify-content: space-between;
   margin-left: 2%;
+}
+
+.registrationForm {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.editForm {
+  margin-bottom: 5%;
 }

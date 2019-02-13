@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ClassManager from '../module/ClassManager'
 import { Button } from 'reactstrap'
+import Moment from 'react-moment';
 
 export default class EventEditForm extends Component{
     state = {
@@ -40,6 +41,7 @@ export default class EventEditForm extends Component{
         date: this.state.date,
         time:this.state.time,
         description:this.state.description,
+        duration:this.state.duration,
         trainerId:this.state.trainerId,
         spots: this.state.spots,
         spotsTaken: this.state.spotsTaken
@@ -52,7 +54,8 @@ export default class EventEditForm extends Component{
   render() {
     return (
         <React.Fragment>
-            <form className="classForm">
+            <form className="classForm editForm">
+            <h2>Edit {this.state.className} on <Moment format="LLLL">{this.state.date}</Moment></h2>
                 <div className="form-group">
                     <label htmlFor="className">Class Name</label>
                     <input type="text" required
@@ -73,7 +76,7 @@ export default class EventEditForm extends Component{
                 </div>
                 <div className="form-group">
                     <label htmlFor="duration">Duration</label>
-                    <input type="text" required
+                    <textarea type="text" required
                           className="form-control"
                           onChange={this.handleFieldChange}
                           id="duration"
@@ -105,10 +108,10 @@ export default class EventEditForm extends Component{
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="spots"
-                        placeholder="Spots"
+                        value={this.state.spots}
                         />
                 </div>    
-                <button type="submit" onClick={this.updateExistingClass} className="btn btn-primary">Update</button> <button onClick={() => {this.props.history.push("/")}} className="btn btn-primary">Cancel</button>
+                <Button type="submit" onClick={this.updateExistingClass} color="primary">Update</Button> <Button onClick={() => {this.props.history.push("/")}} className="btn btn-primary">Cancel</Button>
                 <Button color="danger" className="delete-class-button" onClick={() => {
                     let deleteConfirmation = window.confirm(`Are you sure you want to delete ${this.state.className} on ${this.state.date}?`)
                     if(deleteConfirmation === true) {

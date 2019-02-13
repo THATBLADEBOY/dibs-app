@@ -45,36 +45,26 @@
     {
       "className": "Spin Class",
       "date": "2019-02-18T17:30",
+      "duration": "45 minutes",
       "description": "This is a class where you ride a bike but don't actually go anywhere.",
       "trainerId": "Dean Martin",
       "spots": 5,
-      "spotsTaken": 2,
+      "spotsTaken": 3,
       "id": 1
     },
     {
       "className": "Kickboxing",
       "date": "2019-02-20T16:00",
+      "duration": "45 minutes",
       "description": "It's like boxing with your feet.",
       "trainerId": "Sammy Davis Jr.",
       "spots": 10,
-      "spotsTaken": 3,
+      "spotsTaken": 2,
       "id": 2
     },
     {
-      "className": "Test",
-      "date": "2019-02-20",
-      "time": "7:00pm",
-      "duration": "45 minutes",
-      "description": "TESTING",
-      "trainerId": "Louis Armstrong",
-      "spots": 10,
-      "spotsTaken": 3,
-      "id": 4
-    },
-    {
       "className": "Hot Yoga",
-      "date": "2019-02-28",
-      "time": "6:00pm",
+      "date": "2019-02-19T18:00",
       "duration": "45 minutes",
       "description": "Yoga that makes you more sweaty than regular yoga.",
       "trainerId": "Frank Sinatra",
@@ -84,12 +74,11 @@
     },
     {
       "className": "Boxing",
-      "date": "2019-02-21",
-      "time": "6:00pm",
+      "date": "2019-02-21T18:00",
       "duration": "45 minutes",
       "description": "We hit da bag hard.",
       "trainerId": "Tony Bennett",
-      "spots": "12",
+      "spots": 12,
       "spotsTaken": 0,
       "id": 7
     },
@@ -97,17 +86,19 @@
       "className": "Boxing",
       "date": "2019-02-20T13:00",
       "description": "Punching a bag and trying not to get hit by said bag.",
+      "duration": "45 minutes",
       "trainerId": "Sammy Davis Jr.",
-      "spots": "20",
+      "spots": "10",
       "spotsTaken": 0,
       "id": 9
     },
     {
       "className": "Weight Circuit",
       "date": "2019-02-04T17:00",
+      "duration": "45 minutes",
       "description": "Circuits with cycles of 1 minutes weight lifting with a 30 second break between lift cycles. Design for those who want to build lean muscle.",
       "trainerId": "Frank Sinatra",
-      "spots": "8",
+      "spots": 8,
       "spotsTaken": 0,
       "id": 11
     }
@@ -119,54 +110,29 @@
       "classId": 2
     },
     {
+      "classId": 1,
+      "userId": 2,
+      "id": 5
+    },
+    {
       "classId": 2,
       "userId": 2,
+      "id": 6
+    },
+    {
+      "classId": 1,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "classId": 1,
+      "userId": 3,
       "id": 8
     },
     {
-      "classId": 1,
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "classId": 1,
-      "userId": 1,
-      "id": 12
-    },
-    {
-      "classId": 4,
-      "userId": 1,
-      "id": 13
-    },
-    {
-      "classId": 2,
-      "userId": 1,
-      "id": 14
-    },
-    {
       "classId": 2,
       "userId": 3,
-      "id": 21
-    },
-    {
-      "classId": 1,
-      "userId": 3,
-      "id": 22
-    },
-    {
-      "classId": 5,
-      "userId": 4,
-      "id": 23
-    },
-    {
-      "classId": 1,
-      "userId": 4,
-      "id": 24
-    },
-    {
-      "classId": 1,
-      "userId": 2,
-      "id": 25
+      "id": 9
     }
   ]
 }

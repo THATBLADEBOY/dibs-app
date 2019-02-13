@@ -20,7 +20,9 @@ export class ClassCard extends Component {
         <p>with {classes.trainerId}</p>
         <p>{classes.spotsTaken} of {classes.spots} seats filled.</p>
         <div className="buttons-container">
+        {isTrainer === "true" &&
         <UsersInClassModal theClass={classes} getUsersInClass={this.props.getUsersInClass}/>
+        }
         <Button className="dibs-button" onClick={() => {
             this.props.dibsFunction(classes.id, classes)
         }} color="primary">dibs</Button>
