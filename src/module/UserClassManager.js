@@ -12,6 +12,11 @@ export default {
     .then(e => e.json());
     },
 
+   getUsersInSpecificClass(classId){
+       return fetch(`${remoteURL}/userClasses?classId=${classId}&_expand=user`)
+       .then(e => e.json());
+   } ,
+
 post(newClass) {
     let sessionId = sessionStorage.getItem("userId")
     return fetch(`${remoteURL}/userClasses?userId=${sessionId}&_expand=class`, {

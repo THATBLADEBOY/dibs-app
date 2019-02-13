@@ -21,7 +21,7 @@ export class ApplicationViews extends Component {
         currentUserId: "",
         spotsTaken: "",
         usersInClass: [],
-        quoteInfo: ""
+        quoteInfo: "",
       }
 
 componentDidMount() {
@@ -52,6 +52,13 @@ getUserClasses = () => {
     UserClassManager.getUserSpecificClasses(currentUserId).then(allClasses => {
     this.setState({ userClasses: allClasses })
 })
+}
+
+getUsersInClass = (classId) => {
+  UserClassManager.getUsersInSpecificClass(classId)
+  .then(allUsers => {
+    this.setState({usersInClass: allUsers})
+  })
 }
 
 
@@ -185,7 +192,7 @@ updateComponent = () => {
           return <TrainerRegistration {...props} addUser={this.addUser} />
         }} />
         <Route exact path="/" render={(props) => {
-          return <Dashboard {...props} quoteInfo={this.state.quoteInfo} getUsersInClass={this.getTheUsersInClass} removeSpotFromClass={this.removeSpotFromClass} addSpotToClass={this.addSpotToClass}dibsFunction={this.dibsFunction} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
+          return <Dashboard {...props} usersInClass={this.state.usersInClass} quoteInfo={this.state.quoteInfo} getUsersInClass={this.getUsersInClass} removeSpotFromClass={this.removeSpotFromClass} addSpotToClass={this.addSpotToClass}dibsFunction={this.dibsFunction} userClasses={this.state.userClasses} classes={this.state.classes} updateComponent={this.updateComponent} addUserClass={this.addUserClass} deleteUserClass={this.deleteUserClass}/>
         }} />
         <Route path="/newclass" render={(props) => {
           return <ClassForm {...props} addClass={this.addClass}/>
