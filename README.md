@@ -1,5 +1,7 @@
 # dibs
 
+![dibs screenshot](https://i.imgur.com/JYzWn6I.png)
+
 dibs is a ReactJs application designed to make the process of creating and signing up for gym classes easier! dibs has 2 user types: a trainer and a member.
 
 A trainer has the ability to create and schedule classes with a date and time, description of the class, and set a limit on the number of spots available in the class. If a trainer chooses, they can also edit or delete a class. The change to the editted or deleted class will apply to all users who had an instance of the class. Trainers are also able to see what members have signed up for classes to help determine the level of intinsity to bring to the class. To have a trainer account, another trainer must log in and create the account for the future trainer.
