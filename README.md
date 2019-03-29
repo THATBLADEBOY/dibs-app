@@ -20,11 +20,13 @@ cd to the root and run npm start
 ## Usage
 
 You can create a user account on the login page, or use the below account for an account with data pre-populated:
-```login email: duke@mail.com
+```
+    login email: duke@mail.com
     password: pw
 ```
 To view a trainer account, you will need to log in with an existing account. Here is Frank Sinatra's login:
-```login email: sinatra@mail.com
+```
+    login email: sinatra@mail.com
     password: pw
 ```
 One of my goals in designing this project was to make it super user friendly. I hope that you can find your way around naturally! However, here are some things to try out when you log in.
